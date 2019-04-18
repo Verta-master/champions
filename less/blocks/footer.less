@@ -1,0 +1,35 @@
+.footer {
+  background-image: url(../img/images/bg-footer.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-color: rgb(232, 232, 232);
+  
+  .menu__item {
+    color: #e8e8e8;
+    
+    &:hover,
+    &:active,
+    &--active {
+      color: @red;
+      .transition();
+    }
+  }
+  
+  .social__item {
+    &:hover,
+    &:active {
+      filter: none;
+      opacity: 0.7;
+      .transition();
+    }
+  }
+}
+
+.footer__wrap {
+  padding-top: 30px;
+  padding-bottom: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
