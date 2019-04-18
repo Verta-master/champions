@@ -1,0 +1,18 @@
+.social {
+  .reset();
+  list-style: none;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.social__item {
+  margin-left: 10px;
+  .transition();
+  
+  &:hover,
+  &:active {
+    filter: grayscale(1);
+    .transition();
+  }
+}

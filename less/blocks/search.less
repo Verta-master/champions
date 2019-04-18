@@ -1,0 +1,30 @@
+.search {
+  width: 180px;
+  display: flex;
+  justify-content: space-between;
+  border: 1px solid rgb(186, 186, 186);
+  background-color: rgb(255, 255, 255);
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+.search__btn {
+  display: block;
+  width: 30px;
+  height: 30px;
+  background-image: url(../img/icons/icon-search.png);
+  background-repeat: no-repeat;
+  background-size: 18px 18px;
+  background-position: center;
+}
+
+.search__input {
+  display: block;
+  flex-grow: 1;
+  height: 30px;
+  font-size: 12px;
+  
+  &::placeholder {
+    opacity: 1;
+  }
+}

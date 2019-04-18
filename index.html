@@ -6,13 +6,13 @@
   <meta  name="viewport" content="width=device-width,initial-scale=1">
   <title>Title</title>
   <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700,900&amp;subset=cyrillic-ext" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.2.2/css/swiper.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/css/swiper.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.3.1/jquery.fancybox.min.css">
   <link rel="stylesheet" href="css/style.min.css">
 </head>
 <body>
   <header class="header">
-    <div class="wrapper">
+    <div class="wrapper header__wrap">
       <div class="logo">
         <img src="img/images/logo.png" alt="Logo">
       </div>
@@ -68,7 +68,7 @@
     </div>
   </header>
   <div class="header__bottom">
-    <div class="wrapper">
+    <div class="wrapper header__menu">
       <nav class="menu">
         <button type="button" class="menu__btn"></button>
         <ul class="menu__list">
@@ -129,7 +129,7 @@
         <section class="promo">
           <div class="promo__main">
             <!--  Slider    -->
-            <div class="swiper-container promo__slider">
+            <div class="swiper-container gallery-top">
               <div class="swiper-wrapper">
                 <div class="swiper-slide promo__slide">
                   <a href="#" class="promo__link" style="background-image: url(img/images/img-1.jpg);">
@@ -149,32 +149,44 @@
                     <time datetime="2019-03-25T09:58">25 марта 9:58</time>
                   </a>
                 </div>
+                <div class="swiper-slide promo__slide">
+                  <a href="#" class="promo__link" style="background-image: url(img/images/img-4.jpg);">
+                    <p>Весь зал болеет за Virtus.pro! Дневники DreamLeague Major</p>
+                    <time datetime="2019-03-25T09:58">25 марта 9:58</time>
+                  </a>
+                </div>
               </div>
               <div class="swiper-button-prev promo__prev"></div>
               <div class="swiper-button-next promo__next"></div>
             </div>
-            
-            <!--  Items below slider    -->
-            <ul class="promo__list">
-              <li class="promo__item">
-                <a href="#" class="promo__link" style="background-image: url(img/images/img-2.jpg);">
-                  <p>Vici Gaming стала чемпионом DreamLeague Major</p>
-                  <time datetime="2019-03-25T01:14">25 марта 1:14</time>
-                </a>
-              </li>
-              <li class="promo__item">
-                <a href="#" class="promo__link" style="background-image: url(img/images/img-3.jpg);">
-                  <p>«Нереальная воля к победе и рекорд по камбекам». Что говорят о финале DreamLeague Major</p>
-                  <time datetime="2019-03-25T09:58">25 марта 9:58</time>
-                </a>
-              </li>
-              <li class="promo__item">
-                <a href="#" class="promo__link" style="background-image: url(img/images/img-4.jpg);">
-                  <p>Весь зал болеет за Virtus.pro! Дневники DreamLeague Major</p>
-                  <time datetime="2019-03-25T09:58">25 марта 9:58</time>
-                </a>
-              </li>
-            </ul>
+            <div class="swiper-container gallery-thumbs">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <a href="#" class="promo__link" style="background-image: url(img/images/img-1.jpg);">
+                    <p>В патче 7.21d для Dota 2 ослабили Oracle</p>
+                    <time datetime="2019-03-25T01:00">25 марта 1:00</time>
+                  </a>
+                </div>
+                <div class="swiper-slide">
+                  <a href="#" class="promo__link" style="background-image: url(img/images/img-2.jpg);">
+                    <p>Vici Gaming стала чемпионом DreamLeague Major</p>
+                    <time datetime="2019-03-25T01:14">25 марта 1:14</time>
+                  </a>
+                </div>
+                <div class="swiper-slide">
+                  <a href="#" class="promo__link" style="background-image: url(img/images/img-3.jpg);">
+                    <p>«Нереальная воля к победе и рекорд по камбекам». Что говорят о финале DreamLeague Major</p>
+                    <time datetime="2019-03-25T09:58">25 марта 9:58</time>
+                  </a>
+                </div>
+                <div class="swiper-slide">
+                  <a href="#" class="promo__link" style="background-image: url(img/images/img-4.jpg);">
+                    <p>Весь зал болеет за Virtus.pro! Дневники DreamLeague Major</p>
+                    <time datetime="2019-03-25T09:58">25 марта 9:58</time>
+                  </a>
+                </div>
+              </div>
+            </div>
           </div>
           
           <!--  Twitch block aside    -->
@@ -553,19 +565,28 @@
   </footer>
   
   <script src="js/jquery-3.2.1.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.2.2/js/swiper.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/js/swiper.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.3.1/jquery.fancybox.min.js"></script>
   <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 
   <!-- Sliders -->
   <script>
-    var mySwiper = new Swiper ('.promo__slider', {
+    var galleryThumbs = new Swiper('.gallery-thumbs', {
+      spaceBetween: 15,
+      slidesPerView: 3,
+      freeMode: true,
+      watchSlidesVisibility: true,
+      watchSlidesProgress: true,
+    });
+    var galleryTop = new Swiper('.gallery-top', {
+      spaceBetween: 10,
       navigation: {
         nextEl: '.promo__next',
         prevEl: '.promo__prev',
       },
-      preventClicks: false,
-      preventClicksPropagation: false,
+      thumbs: {
+        swiper: galleryThumbs
+      }
     });
   </script>
   
