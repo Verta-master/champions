@@ -1,0 +1,178 @@
+@media (max-width: 1230px) {
+  .wrapper {
+    width: 100%;
+  }
+  .header__item:nth-child(5),
+  .header__item:nth-child(6) {
+    display: none;
+  }
+  .promo {
+    flex-direction: column;
+    align-items: center;
+  }
+  .promo__aside {
+    width: 100%;
+    margin-top: 15px;
+  }
+  .promo__twitch {
+    display: flex;
+    justify-content: space-between;
+  }
+  .promo__point {
+    width: 49%;
+    margin-bottom: 0;
+  }
+  .sidebar {
+    width: 33%;
+  }
+  .news {
+    width: 65%;
+  }
+}
+
+//-----------------------------------------------------
+@media (max-width: 1022px) {
+  .header__item:nth-child(3),
+  .header__item:nth-child(4) {
+    display: none;
+  }
+  .header__bottom {
+    position: relative;
+  }
+  .menu__btn {
+    display: block;
+    width: 30px;
+    height: 30px;
+    background-image: url(../img/icons/icon-menu-ham.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 30px 19px;
+  }
+  .menu--opened .menu__btn {
+    background-image: url(../img/icons/icon-menu-cross.svg);
+    background-size: 24px 24px;
+  }
+  .menu__list {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    padding: 15px;
+    background-color: rgba(232, 232, 232, 0.87);
+  }
+  .menu__item {
+    margin-right: 0;
+  }
+  .menu__link {
+    display: block;
+    width: 100%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+  .news,
+  .sidebar,
+  .promo__main {
+    width: 100%;
+  }
+  .columns {
+    display: block;
+  }
+  .sidebar__item {
+    min-height: auto;
+  }
+  .news,
+  .sidebar {
+    margin-top: 15px;
+  }
+  .footer .menu {
+    display: none;
+  }
+  .footer .social {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .promo__thumb {
+    width: 226px;
+  }
+}
+
+//-----------------------------------------------------
+@media (max-width: 766px) {
+  .header__list {
+    display: none;
+  }
+  .news__info {
+    font-size: 14px;
+  }
+  .calender__name {
+    font-size: 16px;
+    text-align: center;
+  }
+}
+
+//-----------------------------------------------------
+@media (max-width: 460px) {
+  .promo__thumb p {
+    font-size: 12px;
+  }
+  .promo__slide p {
+    font-size: 20px;
+  }
+  .search {
+    display: none;
+  }
+  .calender__title,
+  .promo__twitch {
+    display: block;
+  }
+  .promo__point {
+    width: 100%;
+    margin-bottom: 25px;
+  
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+  .news__item {
+    width: 100%;
+  }
+  .calender__name {
+    border-right: 0;
+  }
+  .calender__table {
+    display: block;
+    border-top: 1px solid #ddd;
+    
+    tbody {
+      display: block;
+    }
+    
+    tr:first-child {
+      display: none;
+    }
+    td {
+      display: block;
+      height: auto;
+      padding: 10px 0;
+      border-right: 0;
+    }
+    td:first-child {
+      width: 100%;
+      border-bottom: 0;
+    }
+    td:nth-child(2) {
+      width: 100%;
+      border-bottom: 0;
+    }
+    td:nth-child(3) {
+      width: 100%;
+    }
+  }
+  .gallery-thumbs {
+    display: none;
+  }
+  .gallery-top {
+    margin-bottom: 0;
+  }
+}
