@@ -462,7 +462,7 @@ main {
 }
 .title {
   margin-top: 0;
-  margin-bottom: 10px;
+  margin-bottom: 7px;
   font-size: 24px;
   font-weight: 700;
   letter-spacing: 0.025em;
@@ -642,8 +642,8 @@ main {
           box-shadow: 0px 4px 7.74px 1.26px rgba(0, 0, 0, 0.46);
 }
 .header__menu {
-  padding-top: 5px;
-  padding-bottom: 5px;
+  padding-top: 6px;
+  padding-bottom: 6px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -672,7 +672,7 @@ main {
           align-items: center;
 }
 .menu__item {
-  margin-right: 25px;
+  margin-right: 22px;
   font-size: 18px;
   font-weight: 500;
   -webkit-transition: ease-out 0.3s;
@@ -763,7 +763,7 @@ main {
   transition: ease-out 0.3s;
 }
 .promo__slide {
-  padding: 30px 15px;
+  padding: 25px 15px;
 }
 .promo__slide p {
   margin-bottom: 15px;
@@ -781,7 +781,7 @@ main {
 .promo__thumb {
   width: 263px;
   height: 100%;
-  padding: 15px;
+  padding: 10px 15px;
 }
 .promo__thumb p {
   margin-bottom: 5px;
@@ -813,7 +813,7 @@ main {
   list-style: none;
 }
 .promo__point {
-  margin-bottom: 20px;
+  margin-bottom: 25px;
 }
 .promo__point:last-child {
   margin-bottom: 0;
@@ -877,7 +877,7 @@ main {
 }
 .sidebar {
   width: 380px;
-  padding: 15px;
+  padding: 10px 15px;
   background-color: #ffffff;
   -webkit-box-shadow: 0px 4px 5.64px 0.36px rgba(0, 0, 0, 0.11);
           box-shadow: 0px 4px 5.64px 0.36px rgba(0, 0, 0, 0.11);
@@ -888,8 +888,20 @@ main {
   list-style: none;
 }
 .sidebar__item {
-  padding-top: 20px;
-  padding-bottom: 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  min-height: 122px;
+  padding-top: 15px;
+  padding-bottom: 12px;
+  margin-bottom: 7px;
   border-bottom: 1px solid #383838;
 }
 .sidebar__item:last-child {
@@ -909,12 +921,14 @@ main {
   transition: ease-out 0.3s;
 }
 .sidebar__item time {
+  display: block;
+  margin-top: auto;
   font-size: 12px;
   color: #898989;
 }
 .news {
   width: 776px;
-  padding: 15px;
+  padding: 10px 15px;
   padding-bottom: 1px;
   background-color: #ffffff;
   -webkit-box-shadow: 0px 4px 5.64px 0.36px rgba(0, 0, 0, 0.11);
@@ -932,6 +946,7 @@ main {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  margin-top: 20px;
 }
 .news__item {
   width: 49%;
@@ -975,7 +990,7 @@ main {
   left: 0;
   right: 0;
   bottom: 0;
-  padding: 15px;
+  padding: 10px 15px;
   font-size: 18px;
   color: #fff;
   font-weight: 700;
@@ -990,6 +1005,7 @@ main {
   width: 100%;
   margin-top: 15px;
   padding: 15px;
+  padding-top: 10px;
   background-color: #ffffff;
   -webkit-box-shadow: 0px 4px 5.64px 0.36px rgba(0, 0, 0, 0.11);
           box-shadow: 0px 4px 5.64px 0.36px rgba(0, 0, 0, 0.11);
@@ -1007,8 +1023,8 @@ main {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin-top: 15px;
-  margin-bottom: 15px;
+  margin-top: 17px;
+  margin-bottom: 20px;
 }
 .calender__title .ui-tabs-active {
   color: #df3c26;
@@ -1050,7 +1066,7 @@ main {
   width: 50%;
 }
 .calender__table td {
-  height: 60px;
+  height: 61px;
   padding-left: 15px;
   padding-right: 15px;
   border-right: 1px solid #383838;
@@ -1072,6 +1088,12 @@ main {
   display: inline-block;
   vertical-align: middle;
 }
+.calender__table td time {
+  margin-right: 5px;
+}
+.calender__table td span {
+  margin-right: 20px;
+}
 .calender__table a {
   -webkit-transition: ease-out 0.3s;
   transition: ease-out 0.3s;
@@ -1081,4 +1103,42 @@ main {
   color: #df3c26;
   -webkit-transition: ease-out 0.3s;
   transition: ease-out 0.3s;
+}
+.footer {
+  background-image: url(../img/images/bg-footer.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-color: #e8e8e8;
+}
+.footer .menu__item {
+  color: #e8e8e8;
+}
+.footer .menu__item:hover,
+.footer .menu__item:active,
+.footer .menu__item--active {
+  color: #df3c26;
+  -webkit-transition: ease-out 0.3s;
+  transition: ease-out 0.3s;
+}
+.footer .social__item:hover,
+.footer .social__item:active {
+  -webkit-filter: none;
+          filter: none;
+  opacity: 0.7;
+  -webkit-transition: ease-out 0.3s;
+  transition: ease-out 0.3s;
+}
+.footer__wrap {
+  padding-top: 30px;
+  padding-bottom: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
