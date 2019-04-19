@@ -475,6 +475,8 @@ main {
   width: 870px;
   height: 490px;
   margin: 0 auto;
+  max-width: 100%;
+  border: 0;
 }
 .social {
   margin: 0;
@@ -1193,6 +1195,17 @@ main {
   -webkit-transition: ease-out 0.3s;
   transition: ease-out 0.3s;
 }
+.calender__table--card {
+  font-size: 18px;
+}
+.calender__table--card th:nth-child(2),
+.calender__table--card td:nth-child(2) {
+  width: 50%;
+}
+.calender__table--card th:nth-child(3),
+.calender__table--card td:nth-child(3) {
+  width: 35%;
+}
 .footer {
   background-image: url(../img/images/bg-footer.jpg);
   background-repeat: no-repeat;
@@ -1349,6 +1362,8 @@ main {
 }
 .card__li {
   padding-right: 10px;
+  font-size: 16px;
+  line-height: 24px;
 }
 .card__li b {
   display: block;
@@ -1371,7 +1386,7 @@ main {
           flex-grow: 1;
 }
 .card__stage {
-  margin-bottom: 10px;
+  margin-bottom: 5px;
   font-weight: 700;
   font-size: 14px;
 }
@@ -1380,7 +1395,9 @@ main {
   padding: 0;
   padding-left: 20px;
   font-size: 14px;
-  line-height: 24px;
+}
+.card__list li {
+  margin-bottom: 6px;
 }
 @media (max-width: 1230px) {
   .wrapper {
@@ -1489,6 +1506,10 @@ main {
   .promo__thumb {
     width: 226px;
   }
+  .video iframe {
+    width: 700px;
+    height: 350px;
+  }
 }
 @media (max-width: 766px) {
   .header__list {
@@ -1505,9 +1526,17 @@ main {
   .news--internal .news__item {
     width: 49%;
   }
+  .card__info,
   .news__more {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
+  }
+  .card__li {
+    margin-bottom: 10px;
+    max-width: 100%;
+  }
+  .card__li--format {
+    width: 100%;
   }
 }
 @media (max-width: 460px) {
@@ -1541,6 +1570,7 @@ main {
     display: block;
     border-top: 1px solid #ddd;
   }
+  .calender__table tr,
   .calender__table tbody {
     display: block;
   }
@@ -1591,5 +1621,16 @@ main {
   .news__pic img {
     width: 100%;
     height: auto;
+  }
+  .calender__table--card tr,
+  .calender__table--card td:nth-child(2),
+  .calender__table--card td:nth-child(3) {
+    display: block;
+    width: 100%;
+    text-align: center;
+  }
+  .video iframe {
+    width: 100%;
+    height: 160px;
   }
 }
