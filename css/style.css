@@ -590,24 +590,21 @@ main {
   height: 100%;
 }
 .header__name {
-  position: relative;
   margin-top: 0;
   margin-bottom: 5px;
-  padding-left: 17px;
   font-weight: 900;
   -webkit-transition: ease-out 0.3s;
   transition: ease-out 0.3s;
 }
-.header__name::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
+.header__name img {
+  display: inline-block;
+  vertical-align: middle;
   width: 14px;
-  height: 14px;
-  background-image: url(../img/icons/icon-red.png);
-  background-repeat: no-repeat;
-  background-size: contain;
+  height: auto;
+}
+.header__name span {
+  display: inline-block;
+  vertical-align: middle;
 }
 .header__all {
   width: 65px;
@@ -935,6 +932,12 @@ main {
   -webkit-box-shadow: 0px 4px 5.64px 0.36px rgba(0, 0, 0, 0.11);
           box-shadow: 0px 4px 5.64px 0.36px rgba(0, 0, 0, 0.11);
 }
+.news--internal {
+  width: 100%;
+}
+.news--internal .news__item {
+  width: 32.5%;
+}
 .news__list {
   margin: 0;
   padding: 0;
@@ -967,6 +970,7 @@ main {
   height: 100%;
   width: auto;
   max-width: none;
+  min-width: 100%;
 }
 .news__link::before {
   content: "";
@@ -1010,6 +1014,10 @@ main {
   background-color: #ffffff;
   -webkit-box-shadow: 0px 4px 5.64px 0.36px rgba(0, 0, 0, 0.11);
           box-shadow: 0px 4px 5.64px 0.36px rgba(0, 0, 0, 0.11);
+}
+.calender--internal {
+  margin-top: 0;
+  margin-bottom: 15px;
 }
 .calender__title {
   margin: 0;
@@ -1182,6 +1190,9 @@ main {
   .news {
     width: 65%;
   }
+  .news--internal {
+    width: 100%;
+  }
 }
 @media (max-width: 1022px) {
   .header__item:nth-child(3),
@@ -1259,6 +1270,9 @@ main {
     font-size: 16px;
     text-align: center;
   }
+  .news--internal .news__item {
+    width: 49%;
+  }
 }
 @media (max-width: 460px) {
   .promo__thumb p {
@@ -1319,5 +1333,8 @@ main {
   }
   .gallery-top {
     margin-bottom: 0;
+  }
+  .news--internal .news__item {
+    width: 100%;
   }
 }
