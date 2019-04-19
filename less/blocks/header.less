@@ -44,23 +44,21 @@
 }
 
 .header__name {
-  position: relative;
   margin-top: 0;
   margin-bottom: 5px;
-  padding-left: 17px;
   font-weight: 900;
   .transition();
   
-  &::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
+  img {
+    display: inline-block;
+    vertical-align: middle;
     width: 14px;
-    height: 14px;
-    background-image: url(../img/icons/icon-red.png);
-    background-repeat: no-repeat;
-    background-size: contain;
+    height: auto;
+  }
+  
+  span {
+    display: inline-block;
+    vertical-align: middle;
   }
 }
 
