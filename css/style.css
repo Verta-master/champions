@@ -460,6 +460,9 @@ main {
           justify-content: space-between;
   margin-top: 15px;
 }
+.columns--mt {
+  margin-top: 0;
+}
 .title {
   margin-top: 0;
   margin-bottom: 7px;
@@ -924,6 +927,13 @@ main {
   font-size: 12px;
   color: #898989;
 }
+.sidebar__wrap img {
+  width: 86px;
+  height: auto;
+  margin-bottom: 10px;
+  margin-right: 10px;
+  float: left;
+}
 .news {
   width: 776px;
   padding: 10px 15px;
@@ -937,6 +947,12 @@ main {
 }
 .news--internal .news__item {
   width: 32.5%;
+}
+.news time {
+  display: block;
+  margin-bottom: 20px;
+  font-size: 14px;
+  color: #898989;
 }
 .news__list {
   margin: 0;
@@ -1005,6 +1021,64 @@ main {
   margin: 0;
   -webkit-transition: ease-out 0.3s;
   transition: ease-out 0.3s;
+}
+.news__text {
+  margin-bottom: 35px;
+  font-size: 14px;
+  line-height: 24px;
+}
+.news__text img {
+  width: 273px;
+  height: auto;
+  margin-right: 15px;
+  margin-bottom: 5px;
+  float: left;
+}
+.news__text p {
+  margin-top: 0;
+  margin-bottom: 25px;
+}
+.news__more {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.news__point {
+  width: 32%;
+  font-size: 16px;
+  font-weight: 700;
+  -webkit-transition: ease-out 0.3s;
+  transition: ease-out 0.3s;
+}
+.news__point:hover,
+.news__point:active {
+  color: #df3c26;
+  -webkit-transition: ease-out 0.3s;
+  transition: ease-out 0.3s;
+}
+.news__point a {
+  display: block;
+  width: 100%;
+}
+.news__point p {
+  max-width: 100%;
+}
+.news__pic {
+  width: 100%;
+  height: 152px;
+  overflow: hidden;
+}
+.news__pic img {
+  display: block;
+  height: 100%;
+  width: auto;
+  max-width: none;
 }
 .calender {
   width: 100%;
@@ -1151,6 +1225,81 @@ main {
       -ms-flex-align: center;
           align-items: center;
 }
+.comment__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.comment__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  padding-top: 15px;
+  padding-bottom: 27px;
+}
+.comment__icon {
+  width: 50px;
+  height: 50px;
+  margin-top: 5px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+.comment__info {
+  width: calc(100% - 75px);
+  font-size: 14px;
+}
+.comment__name {
+  margin-top: 0;
+  font-weight: 700;
+}
+.comment__btns {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.comment__btn {
+  display: block;
+  width: 65px;
+  height: 35px;
+  padding-left: 30px;
+  font-size: 16px;
+  line-height: 35px;
+  background-repeat: no-repeat;
+}
+.comment__btn--up {
+  color: #85c457;
+  background-image: url(../img/icons/icon-up.png);
+  background-size: 23px 25px;
+  background-position: left top;
+}
+.comment__btn--down {
+  color: #df3c26;
+  background-image: url(../img/icons/icon-down.png);
+  background-size: 24px 25px;
+  background-position: left top 10px;
+}
+.comment__link {
+  display: block;
+  margin-bottom: 15px;
+  color: #df3c26;
+  font-size: 16px;
+}
+.comment__link:hover,
+.comment__link:active {
+  text-decoration: underline;
+}
 @media (max-width: 1230px) {
   .wrapper {
     width: 100%;
@@ -1270,8 +1419,13 @@ main {
     font-size: 16px;
     text-align: center;
   }
+  .news__point,
   .news--internal .news__item {
     width: 49%;
+  }
+  .news__more {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
   }
 }
 @media (max-width: 460px) {
@@ -1334,7 +1488,26 @@ main {
   .gallery-top {
     margin-bottom: 0;
   }
+  .comment__info,
+  .news__point,
   .news--internal .news__item {
     width: 100%;
+  }
+  .sidebar__wrap img {
+    float: none;
+  }
+  .news__text img {
+    float: none;
+    margin-right: 0;
+    width: 100%;
+    height: auto;
+  }
+  .comment__item {
+    display: block;
+  }
+  .news__pic,
+  .news__pic img {
+    width: 100%;
+    height: auto;
   }
 }
