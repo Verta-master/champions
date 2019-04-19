@@ -98,6 +98,10 @@
   .promo__thumb {
     width: 226px;
   }
+  .video iframe {
+    width: 700px;
+    height: 350px;
+  }
 }
 
 //-----------------------------------------------------
@@ -116,8 +120,17 @@
   .news--internal .news__item {
     width: 49%;
   }
+  .card__info,
   .news__more {
     flex-wrap: wrap;
+  }
+  .card__li {
+    margin-bottom: 10px;
+    max-width: 100%;
+    
+    &--format {
+      width: 100%;
+    }
   }
 }
 
@@ -154,6 +167,7 @@
     display: block;
     border-top: 1px solid #ddd;
     
+    tr,
     tbody {
       display: block;
     }
@@ -206,5 +220,18 @@
   .news__pic img {
     width: 100%;
     height: auto;
+  }
+  .calender__table--card {
+    tr,
+    td:nth-child(2),
+    td:nth-child(3) {
+      display: block;
+      width: 100%;
+      text-align: center;
+    }
+  }
+  .video iframe {
+    width: 100%;
+    height: 160px;
   }
 }
